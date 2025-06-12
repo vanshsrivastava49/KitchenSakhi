@@ -2,7 +2,7 @@
 
 **KitchenSakhi** is an AI-powered web application that helps users generate weekly meal plans based on their dietary preferences and regional Indian cuisines. It also features a smart ingredient-based chatbot for instant meal suggestions — all while keeping user data and history in MongoDB.
 
-![KitchenSakhi Banner](https://user-images.githubusercontent.com/0000000/banner-placeholder.png) <!-- Replace with your actual banner if needed -->
+![KitchenSakhi Banner](![alt text](image.png)) <!-- Replace with your actual banner if needed -->
 
 ---
 
