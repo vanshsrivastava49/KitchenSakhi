@@ -1,0 +1,14 @@
+@import "tailwindcss";
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-thumb {
+  background-color: #f97316; /* orange-500 */
+  border-radius: 10px;
+}
+body{
+  font-family: "Figtree", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 600;
+  font-style: normal;
+}
