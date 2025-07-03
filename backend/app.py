@@ -7,6 +7,7 @@ import google.generativeai as genai
 import uuid
 from reportlab.lib.pagesizes import A4
 from reportlab.pdfgen import canvas
+import bcrypt
 load_dotenv()
 GEMINI_API_KEY = os.getenv("GEMINI_API_KEY")
 MONGO_URI = os.getenv("mongodb://localhost:27017/")

@@ -14,10 +14,9 @@ const Chatbot = () => {
     setInput('')
 
     try {
-      const username = localStorage.getItem('username') || "Anonymous"
       const res = await axios.post('http://localhost:5000/chat', {
         ingredients: input,
-        username: username,
+        username: 'vansh',
       })
 
       const botMsg = { sender: 'bot', text: res.data.response }
@@ -26,7 +25,7 @@ const Chatbot = () => {
       console.error("Chat error:", error.response?.data || error.message)
       const errorMsg = {
         sender: 'bot',
-        text: '❌ Error generating response. Please try again.',
+        text: 'Error generating response. Please try again.',
       }
       setMessages(prev => [...prev, errorMsg])
     }
@@ -34,7 +33,7 @@ const Chatbot = () => {
 
   return (
     <div className="bg-white p-6 rounded-xl shadow-xl border border-orange-300 max-w-3xl mx-auto">
-      {/* Chat Window */}
+      {/* chit chat window */}
       <div className="h-[400px] overflow-y-auto flex flex-col gap-4 p-4 bg-orange-50 rounded-lg border border-orange-200">
         {messages.map((msg, idx) => (
           <div
@@ -50,7 +49,7 @@ const Chatbot = () => {
         ))}
       </div>
 
-      {/* Input Area */}
+      {/* input logic hi kehde */}
       <div className="mt-4 flex gap-2">
         <input
           type="text"
@@ -64,7 +63,7 @@ const Chatbot = () => {
           onClick={handleChat}
           className="bg-orange-500 hover:bg-orange-600 text-white px-6 py-3 rounded-lg shadow-lg transition"
         >
-          Ask 🍽️
+          Ask
         </button>
       </div>
     </div>

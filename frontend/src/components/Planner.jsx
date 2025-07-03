@@ -53,7 +53,7 @@ const Planner = () => {
 
   return (
     <div className="bg-white shadow-xl rounded-xl p-6 border border-orange-300 max-w-xl mx-auto mt-10">
-      <h2 className="text-xl font-semibold mb-4 text-orange-700">📅 Weekly Meal Planner</h2>
+      <h2 className="text-xl font-semibold mb-4 text-orange-700">Weekly Meal Planner</h2>
        <label className="block mb-1 font-medium text-gray-700">Select Diet Preference</label>
       <select
         value={preference}
@@ -87,18 +87,18 @@ const Planner = () => {
         onClick={generatePlan}
         disabled={loading}
       >
-        {loading ? '⏳ Generating...' : '🧾 Generate Weekly Plan'}
+        {loading ? 'Generating...' : 'Generate Weekly Plan'}
       </button>
 
       <div className="mt-4 max-h-[240px] overflow-y-auto text-sm text-gray-800 bg-orange-50 p-4 rounded-md border border-orange-200 prose prose-sm">
   {loading ? (
-    '⏳ Preparing weekly plan...'
+    'Preparing weekly plan...'
   ) : error ? (
     <p className="text-red-600">{error}</p>
   ) : plan ? (
     <ReactMarkdown>{plan}</ReactMarkdown>
   ) : (
-    <p>📌 Your meal plan will appear here.</p>
+    <p>Meal plan neeche aaega.</p>
   )}
 </div>
       {plan && !loading && !error && (
@@ -106,7 +106,7 @@ const Planner = () => {
           className="mt-4 px-4 py-2 bg-purple-600 text-white rounded-full hover:bg-purple-700 transition"
           onClick={downloadPDF}
         >
-          📥 Download as PDF
+          Download as PDF
         </button>
       )}
 
